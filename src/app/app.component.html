@@ -330,12 +330,23 @@
   </select>
 
   <!-- Terminal -->
-  <div class="terminal" >
-      <pre >{{ message }}</pre>
-      <pre >{{ data|json }}</pre>
-  </div>
+  <!-- auth.component.html -->
+<div (mousemove)="onUserActivity()" (keypress)="onUserActivity()">
+  <!-- Tu contenido de autenticación aquí -->
+      <div class="terminal" >
+        <pre >{{ message }}</pre>
+        <pre >{{ data|json }}</pre>
+    </div>
+</div>
 
 
+<!-- En tu template HTML -->
+<button (click)="signOut()">Cerrar sesión</button>
+
+<pre >{{ message }}</pre>
+<pre >{{ data|json }}</pre>
+
+<button (click)="onPruebaProxyClick()">Prueba Proxy</button>
 
 </div>
 
